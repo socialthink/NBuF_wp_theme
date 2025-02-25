@@ -1,0 +1,226 @@
+<!doctype html>
+<html lang="de">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Double Header Beispiel</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+         integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+         crossorigin=""/>
+
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+        integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+        crossorigin=""></script>
+
+    <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster/dist/MarkerCluster.Default.css" />
+
+    <script src="https://unpkg.com/leaflet.markercluster/dist/leaflet.markercluster.js"></script>
+
+    <link rel="stylesheet" href="css/styles.css">
+    
+  </head>
+  <body>
+    <!-- Erster Header (z. B. für Kontaktinfos oder Ankündigungen) -->
+    <header class="header-top py-2">
+      <div class="container">
+        <div class="d-flex justify-content-between align-items-center">
+            <div>
+                <a href="#">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-facebook" viewBox="0 0 16 16">
+                <path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951"/>
+                </svg></a>
+
+                <a href="#">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-instagram" viewBox="0 0 16 16">
+                <path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.9 3.9 0 0 0-1.417.923A3.9 3.9 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.9 3.9 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.9 3.9 0 0 0-.923-1.417A3.9 3.9 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599s.453.546.598.92c.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.5 2.5 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.5 2.5 0 0 1-.92-.598 2.5 2.5 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233s.008-2.388.046-3.231c.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92s.546-.453.92-.598c.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92m-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217m0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334"/>
+                </svg></a>
+
+                <a href="#">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-linkedin" viewBox="0 0 16 16">
+                <path d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854zm4.943 12.248V6.169H2.542v7.225zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248S2.4 3.226 2.4 3.934c0 .694.521 1.248 1.327 1.248zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016l.016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225z"/>
+                </svg></a>
+            </div>
+          <div class="d-inline-flex align-items-center"><a href="#">Spenden</a>&nbsp;|&nbsp;<a href="#">Über uns</a> &nbsp;&nbsp; 
+            <div class="dropdown">
+                <button class="btn btn-secondary dropdown-toggle btn-sm" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-translate" viewBox="0 0 16 16">
+                        <path d="M4.545 6.714 4.11 8H3l1.862-5h1.284L8 8H6.833l-.435-1.286zm1.634-.736L5.5 3.956h-.049l-.679 2.022z"/>
+                        <path d="M0 2a2 2 0 0 1 2-2h7a2 2 0 0 1 2 2v3h3a2 2 0 0 1 2 2v7a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2v-3H2a2 2 0 0 1-2-2zm2-1a1 1 0 0 0-1 1v7a1 1 0 0 0 1 1h7a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1zm7.138 9.995q.289.451.63.846c-.748.575-1.673 1.001-2.768 1.292.178.217.451.635.555.867 1.125-.359 2.08-.844 2.886-1.494.777.665 1.739 1.165 2.93 1.472.133-.254.414-.673.629-.89-1.125-.253-2.057-.694-2.82-1.284.681-.747 1.222-1.651 1.621-2.757H14V8h-3v1.047h.765c-.318.844-.74 1.546-1.272 2.13a6 6 0 0 1-.415-.492 2 2 0 0 1-.94.31"/>
+                      </svg>
+                </button>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="#">Deutsch</a></li>
+                  <li><a class="dropdown-item" href="#">Français</a></li>
+                  <li><a class="dropdown-item" href="#">Italiano</a></li>
+                  <li><a class="dropdown-item" href="#">English</a></li>
+                </ul>
+              </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    
+    <!-- Zweiter Header (Navigation mit Logo) -->
+    <header>
+      <nav class="navbar navbar-expand-lg navbar-light header-nav">
+        <div class="container">
+          <a class="navbar-brand" href="#">
+            <!-- Logo-Bild; passe "logo.png" an deinen Bildpfad an -->
+            <img src="bilder/logo.png" alt="Logo" height="50" class="d-inline-block align-top">
+          </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                  aria-controls="navbarNav" aria-expanded="false" aria-label="Navigation umschalten">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+              <li class="nav-item">
+                <a class="nav-link" href="#">Beratung & Begleitung</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Grundlagen & Vernetzung</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Projekte</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+
+    <div class="mb-5"></div>
+
+
+    <!-- Hauptinhalt -->
+    <main class="container my-4">
+      <h1>im Fokus</h1>
+
+      <!-- Fokus -->
+      <div class="grid-container">
+        <a href="link1.html" class="grid-item" style="background-image: url('bilder/test1.png');">
+          <div class="marker-container">
+            <span class="marker-text">
+              Thema 1: Dies ist ein längerer Text, der in mehreren Zeilen dargestellt wird.
+            </span>
+          </div>
+        </a>
+        <a href="link2.html" class="grid-item" style="background-image: url('bilder/test2.jpeg');">
+          <div class="marker-container">
+            <span class="marker-text">
+              Thema 2: Auch hier steht ein mehrzeiliger Text, der links oben markiert ist.
+            </span>
+          </div>
+        </a>
+        <a href="link3.html" class="grid-item" style="background-image: url('bilder/test3.jpg');">
+          <div class="marker-container">
+            <span class="marker-text">
+              Thema 3: Noch ein Beispiel für einen längeren Text, der markiert ist.
+            </span>
+          </div>
+        </a>
+      </div>
+    
+      <div class="mb-5"></div>
+
+      <!--  -->
+
+      <div class="container-fluid p-0">
+        <div class="row">
+          <!-- Linke Spalte -->
+          <div class="col-md-6">            
+            <h1>Unsere Leistungen</h1>
+            <h2>Beratung und Begleitung</h2>
+            <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. &rarr; <a href="#">mehr erfahren</a></p>
+            <h2>Grundlagen und Vernetzung</h2>
+            <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. &rarr; <a href="#">mehr erfahren</a></p>
+            
+            <div class="mb-5"></div>
+            <h1>Neuigkeiten</h1>
+            <p><small>14.2.2025</small><br><a href="#">Das ist der Titel zu einer Neuigkeit - Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut l</a></p>
+            <p><small>14.2.2025</small><br><a href="#">Das ist der Titel zu einer Neuigkeit - Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut l</a></p>
+            <p><small>14.2.2025</small><br><a href="#">Das ist der Titel zu einer Neuigkeit - Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut l</a></p>
+            <p><small>14.2.2025</small><br><a href="#">Das ist der Titel zu einer Neuigkeit - Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut l</a></p>
+
+          </div>
+          <!-- Rechte Spalte als Box -->
+          <div class="col-md-6">
+            <div class="p-3" style="background-color: #FFCC01; border-radius: 5px; box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);">
+              <h1>Über uns</h1>
+              <p>
+                Dies ist der Inhalt der rechten Spalte, die als Box mit dem Hintergrund <strong>#FFCC01</strong> gestaltet ist.
+                Dies ist der Inhalt der rechten Spalte, die als Box mit dem Hintergrund <strong>#FFCC01</strong> gestaltet ist.
+                Dies ist der Inhalt der rechten Spalte, die als Box mit dem Hintergrund <strong>#FFCC01</strong> gestaltet ist.
+              </p>
+            </div>
+            <div class="mb-5"></div>
+            <h1>Familienzentren in der Schweiz</h1>
+            <div id="map"></div>
+            <script>
+              // 1. Karte initialisieren
+              var map = L.map('map').setView([46.7986, 8.2318], 7);
+          
+              // 2. OpenStreetMap-Standardlayer laden
+              L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                  attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OSM</a> contributors'
+              }).addTo(map);
+          
+              // 3. MarkerCluster-Gruppe erstellen
+              var markers = L.markerClusterGroup({
+                maxClusterRadius: 20 // Standard ist 80, 50 macht die Cluster "lockerer"
+              });
+          
+              // 4. Marker hinzufügen
+              var marker1 = L.marker([47.5596, 7.5886]).bindPopup("Familienzentrum XY1 &rarr; <a href=\"#\">mehr</a>");
+              var marker2 = L.marker([47.5621, 7.5900]).bindPopup("Familienzentrum XY2 &rarr; <a href=\"#\">mehr</a>");
+              var marker3 = L.marker([47.5678, 7.5733]).bindPopup("Familienzentrum XY3 &rarr; <a href=\"#\">mehr</a>");
+              var marker4 = L.marker([47.1596, 8.1886]).bindPopup("Familienzentrum XY1 &rarr; <a href=\"#\">mehr</a>");
+              var marker5 = L.marker([47.1621, 8.1900]).bindPopup("Familienzentrum XY2 &rarr; <a href=\"#\">mehr</a>");
+              var marker6 = L.marker([46.1678, 8.733]).bindPopup("Familienzentrum XY3 &rarr; <a href=\"#\">mehr</a>");
+          
+              // 5. Marker zur Cluster-Gruppe hinzufügen
+              markers.addLayer(marker1);
+              markers.addLayer(marker2);
+              markers.addLayer(marker3);
+              markers.addLayer(marker4);
+              markers.addLayer(marker5);
+              markers.addLayer(marker6);
+          
+              // 6. Cluster zur Karte hinzufügen
+              map.addLayer(markers);
+          </script>
+            <p>
+              Dies ist der Inhalt der linken Spalte. Hier können Sie beliebige Informationen platzieren c c c.
+            </p>
+          </div>
+        </div>
+      </div>
+      
+      
+      
+      
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-light text-center text-lg-start mt-4 py-3">
+      <div class="container">
+        <p class="mb-0">© 2025 Netzwerk Bildung und Familie. Alle Rechte vorbehalten.</p>
+        <p class="mb-0"><a href="#">Impressum</a> | <a href="#">Datenschutz</a></p>
+      </div>
+    </footer>
+
+    <!-- Bootstrap JS Bundle (inkl. Popper) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+  <script>
+    L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    maxZoom: 19,
+    attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+}).addTo(map);
+  </script>
+</html>

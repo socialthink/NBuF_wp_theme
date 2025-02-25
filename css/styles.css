@@ -1,0 +1,123 @@
+
+    @font-face {
+        font-family: 'Quicksand'; /* Name der Schriftart */
+        src: url('fonts/Quicksand.ttf') format('truetype'); /* TTF-Datei */
+        font-weight: 300;
+        font-style: normal;
+        }
+    @font-face {
+    font-family: 'Fira Sans'; /* Name der Schriftart */
+    src: url('fonts/FiraSans-Black.ttf') format('truetype'); /* TTF-Datei */
+    font-weight: 900;
+    font-style: normal;
+    }
+    @font-face {
+        font-family: 'Quicksand'; /* Name der Schriftart */
+        src: url('fonts/Quicksand.ttf') format('truetype'); /* TTF-Datei */
+        font-weight: 700;
+        font-style: normal;
+        }   
+    @font-face {
+    font-family: 'Caveat Brush'; /* Name der Schriftart */
+    src: url('fonts/CaveatBrush.ttf') format('truetype'); /* TTF-Datei */
+    font-weight: 400;
+    font-style: normal;
+    }
+    
+      /* Oberer Header: leicht grau, 90% schwarz, sehr dünne Schrift */
+      .header-top {
+        background-color: #f2f2f2; /* leicht grau */
+        color: rgba(0, 0, 0, 0.9);
+        font-weight: 300;
+      }
+      /* Unterer Header: weiß, Text in #C6027D */
+      .header-nav {
+        background-color: #fff !important;
+        font-family: 'Quicksand', sans-serif; /* 'Quicksand' ist die eingebundene Schriftart */
+        font-weight: 700;
+      }
+      .header-nav .navbar-brand,
+      .header-nav .nav-link {
+        color: #C6027D !important;
+      }
+      .header-nav .nav-link:hover {
+        color: #a00663 !important; /* optional: dunklere Variante beim Hover */
+      }
+      /* Sicherstellen, dass der Seitenhintergrund weiß ist */
+      body {
+        background-color: #fff;
+        font-family: 'Quicksand', sans-serif; /* 'Quicksand' ist die eingebundene Schriftart */
+        font-weight: 300;
+        font-size: calc(0.9rem + 0.1vw);
+      }
+      h1 {
+        font-family: 'Fira Sans', sans-serif; /* 'Quicksand' ist die eingebundene Schriftart */
+        font-weight: 900;
+        text-transform: uppercase;
+        font-size: calc(1rem + 1vw);
+      }
+      h2 {
+        font-family: 'Fira Sans', sans-serif; /* 'Quicksand' ist die eingebundene Schriftart */
+        font-weight: 900;
+        text-transform: uppercase;
+        font-size: calc(0.7rem + 1vw);
+        margin-top:30px;
+      }
+      a {
+        color: #C6027D;
+        text-decoration: none;
+      }
+
+      a:hover {
+        text-decoration: underline;
+      }
+      .grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+  }
+  /* Verwende den <a>-Tag als Grid-Item */
+  .grid-container a.grid-item {
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    height: 200px;
+    display: block;       /* macht den Link zu einem Block-Element */
+    text-decoration: none; /* entfernt die Unterstreichung */
+    color: inherit;       /* übernimmt die Schriftfarbe des umgebenden Textes */
+    overflow: hidden;
+  }
+  .marker-container {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+  }
+  .marker-text {
+    background-color: rgba(0, 0, 0, 0.5); /* Halbtransparenter Hintergrund */
+    color: white;
+    font-size: 1rem;
+    font-weight: bold;
+    display: inline;
+    box-decoration-break: clone;
+    -webkit-box-decoration-break: clone;
+    padding: 2px 4px;
+  }
+
+  /* Für Smartphones GRid Aktuelles*/
+  @media (max-width: 768px) {
+    .grid-container {
+      grid-template-columns: 1fr;
+    }
+  }
+  .header-top a {
+    color: #004F9F !important;
+    fill: #004F9F !important;
+    text-decoration: none !important;
+}
+.header-top a:hover {
+    text-decoration: underline; /* Optional: Falls du beim Hover eine Unterstreichung möchtest */
+}
+
+#map {
+  height: 400px;
+    }
