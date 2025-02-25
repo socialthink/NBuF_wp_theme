@@ -115,7 +115,7 @@
     text-decoration: none !important;
 }
 .header-top a:hover {
-    text-decoration: underline; /* Optional: Falls du beim Hover eine Unterstreichung möchtest */
+    text-decoration: underline !important;
 }
 
 #map {
