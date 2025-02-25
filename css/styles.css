@@ -112,7 +112,7 @@
   .header-top a {
     color: #004F9F !important;
     fill: #004F9F !important;
-    text-decoration: none !important;
+    text-decoration: none;
 }
 .header-top a:hover {
     text-decoration: underline !important;
